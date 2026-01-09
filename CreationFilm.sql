@@ -1,0 +1,12 @@
+use testDatabase;
+
+CREATE TABLE dbo.[Film] (
+	[FilmId] INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	Title VARCHAR(100) NOT NULL,
+	ReleaseDate DATE NOT NULL,
+	Director VARCHAR(50) NOT NULL, -- CHECK(LEN(Director) >= 2)
+	Producer VARCHAR(50) NULL,
+	CreationDate DATETIME2(3) NOT NULL DEFAULT GETDATE()
+);
+
+SELECT * FROM [Film];
