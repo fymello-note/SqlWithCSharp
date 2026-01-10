@@ -49,13 +49,17 @@ subito sotto lo using.
 
 ### Operazioni
 
-Stabilita la nostra connessione possiamo fare diverse operazioni all'interno, esempio [inserimento di dati](Insert.md), aggiornamento dei dati, eliminazione e visualizzazione di essi.
+Stabilita la nostra connessione possiamo fare diverse operazioni all'interno, esempio:
+- [inserimento di dati](Insert.md);
+- [aggiornamento dei dati]();
+- [eliminazione dei dati]();
+- [visualizzazione di essi]().
 
 
 Creato il comando e dopo averci aggiunto le variabili desiderate basterà eseguire un comando:
 
 ```C#
-insert.ExecuteNonQuery();
+<SQL_COMMAND>.ExecuteNonQuery();
 ```
 Questo comando esegue la query e ritorna un intero con le righe toccatte dalla query.
 

@@ -5,18 +5,18 @@ Ci sono diversi modi per inserire dei dati all'interno di un database, in ogni c
 > ESEMPIO DI COSA NON FARE
 >
 > ```C#
-> SqlCommand insert = new SqlCommand(){
+> SqlCommand command = new SqlCommand(){
 >     CommandText = $"INSERT INTO <DATABASE_NAME> (<CAMPO_DA_INSERIRE>) VALUES ({<VARIABILE>});",  
 > 
 >     CommandType = CommandType.Text,
 >     Connection = connection
 > }
-> insert.ExecuteNonQuery();
+> command.ExecuteNonQuery();
 > ```
 
 Come creare la stringa di inserimento:
 ```C#
-SqlCommand insert = new SqlCommand(){
+SqlCommand command = new SqlCommand(){
     CommandText = "INSERT INTO <DATABASE_NAME> (<NOME_CAMPO>) VALUES (@<CAMPO_DA_INSERIRE>);",  
 
     CommandType = CommandType.Text,
@@ -45,7 +45,7 @@ string password = "mariorossibest";
 
 ## 1° metodo
 ```C#
-insert.Parameters.AddWithValue("<CAMPO_DA_INSERIRE>", <VARIABILE>);
+command.Parameters.AddWithValue("<CAMPO_DA_INSERIRE>", <VARIABILE>);
 ```
 
 esempio:
@@ -56,13 +56,21 @@ insertMario.Parameters.AddWithValue("FirstName", firstName);
 
 ## 2° metodo
 ```C#
-insert.Parameters.Add(new SqlParameter() { ParameterName = "<CAMPO_DA_INSERIRE>", Value = <VARIABILE>, SqlDbType = SqlDbType.<TIPO>});
+command.Parameters.Add(new SqlParameter() { 
+    ParameterName = "<CAMPO_DA_INSERIRE>",
+    Value = <VARIABILE>,
+    SqlDbType = SqlDbType.<TIPO>
+});
 ```
 
 esempio:
 
 ```C#
-insertMario.Parameters.Add(new SqlParameter() { ParameterName = "LastName", Value = lastName, SqlDbType = SqlDbType.VarChar});
+insertMario.Parameters.Add(new SqlParameter() { 
+    ParameterName = "LastName",
+    Value = lastName,
+    SqlDbType = SqlDbType.VarChar
+});
 ```
 
 ## 3° metodo
@@ -88,3 +96,25 @@ esempio:
 SqlParameter passwordParam = insertMario.Parameters.Add("Password", SqlDbType.VarChar);
 passwordParam.Value = password;
 ```
+
+## 5° metodo (Con Store Procedure)
+```C#
+SqlCommand command = connection.CreateCommand();
+command.CommandText = "<STORE_PROCEDURE_NAME>;
+command.CommandType = CommandType.StoredProcedure;
+
+command.Parameters.AddWithValue("<CAMPO_STORE_PROCEDURE>", <VARIABILE>);
+```
+
+esempio:
+
+```C#
+SqlCommand command = connection.CreateCommand();
+command.CommandText = "dbo.InsertUser";
+command.CommandType = CommandType.StoredProcedure;
+
+command.Parameters.AddWithValue("FirstName", firstName);
+```
+
+
+
