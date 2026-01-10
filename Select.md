@@ -43,15 +43,13 @@ using (SqlCommand command = connection.CreateCommand())
 
 per ciclare sul risultato reader si usa la funzione `reader.Read();` e per prendere i valori ci sono due modi:
 
-1. 
-```C#
-var <VARIABILE> = reader.Get<TIPO>(<POSIZIONE_NUMERICA_COLONNA_ALL_INTERNO_SELECT>);
-```
+1. > ```C#
+   > var <VARIABILE> = reader.Get<TIPO>(<POSIZIONE_NUMERICA_COLONNA_ALL_INTERNO_SELECT>);
+   > ```
 
-2.
-```C#
-var <VARIABILE> = reader.Get<TIPO>(reader.GetOrdinal("<NOME_COLONNA>"));
-```
+2. > ```C#
+   > var <VARIABILE> = reader.Get<TIPO>(reader.GetOrdinal("<NOME_COLONNA>"));
+   > ```
 
 E' consigliato usare solo la seconda. (usate solo la seconda)
 
