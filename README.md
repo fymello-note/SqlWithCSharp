@@ -51,9 +51,9 @@ subito sotto lo using.
 
 Stabilita la nostra connessione possiamo fare diverse operazioni all'interno, esempio:
 - [inserimento di dati](Insert.md);
-- [aggiornamento dei dati]();
-- [eliminazione dei dati]();
-- [visualizzazione di essi]().
+- [aggiornamento dei dati](Update.md);
+- [eliminazione dei dati](Delete.md);
+- [visualizzazione di essi](Select.md).
 
 
 Creato il comando e dopo averci aggiunto le variabili desiderate basterà eseguire un comando:

@@ -129,7 +129,7 @@ using (SqlConnection connection = new SqlConnection(connectionString)) {
             }
 
 
-            // Leggere con un while (Preferibile)
+            // Leggere con un while
             // while (reader.Read())
             // {
             //     //int userId = reader.GetInt32(0);
