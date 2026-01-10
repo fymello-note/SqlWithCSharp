@@ -55,7 +55,7 @@ Stabilita la nostra connessione possiamo fare diverse operazioni all'interno, es
 
 Ci sono diversi modi per inserire dei dati all'interno di un database, in ogni case è consigliato un inserimento con variabili Sql (@<NOME_VARIABILE>) per evitare atticchi hacker.
 
-> # ESEMPIO DI COSA NON FARE
+> ESEMPIO DI COSA NON FARE
 >
 > ```C#
 > SqlCommand insert = new SqlCommand(){
