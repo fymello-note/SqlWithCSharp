@@ -62,3 +62,4 @@ C:\Users\For IT\code\DatabaseDapperAdoNet\DatabaseDapperAdoNet\bin\Debug\net10.0
 C:\Users\For IT\code\DatabaseDapperAdoNet\DatabaseDapperAdoNet\bin\Debug\net10.0\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\For IT\code\DatabaseDapperAdoNet\DatabaseDapperAdoNet\obj\Debug\net10.0\DatabaseDapperAdoNet.csproj.AssemblyReference.cache
 C:\Users\For IT\code\DatabaseDapperAdoNet\DatabaseDapperAdoNet\obj\Debug\net10.0\Database.5F10A71E.Up2Date
+C:\Users\For IT\code\DatabaseDapperAdoNet\DatabaseDapperAdoNet\obj\Debug\net10.0\DatabaseDapperAdoNet.sourcelink.json

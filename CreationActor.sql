@@ -1,0 +1,14 @@
+use testDatabase;
+
+
+SELECT * FROM Film;
+SELECT * FROM Genre;
+
+CREATE TABLE Actor (
+	ActorId INT PRIMARY KEY IDENTITY(1, 1) NOT NULL,
+	FilmId INT FOREIGN KEY REFERENCES dbo.Film(FilmId) NOT NULL,
+	[Name] VARCHAR(100) NOT NULL,
+	CreationDate DATETIME2(3) NOT NULL DEFAULT GETDATE()
+);
+
+SELECT FilmId, [Name] FROM Actor Order by FilmId;
