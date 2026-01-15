@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DatabaseDapperAdoNet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60fd643ed4af1665d5020c70e817cf02682d3503")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78019870f2ed7f9371be5ca82084cb13dcab97f2")]
 [assembly: System.Reflection.AssemblyProductAttribute("DatabaseDapperAdoNet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DatabaseDapperAdoNet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
